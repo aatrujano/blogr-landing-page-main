@@ -1,0 +1,151 @@
+.header {
+  position: relative;
+  background-image: url('../images/bg-pattern-intro.svg');
+  background-position-x: -446px;
+  background-repeat: no-repeat;
+  background-position-y: -1385px;
+  padding: 2rem 10.375rem;
+  border-radius: 0 0 0 60px;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, $bgveryLightRed, $bglightRed);
+  }
+
+  .navBar {
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    &__logo {
+      img {
+        display: block;
+      }
+    }
+    &__menu {
+      align-items: center;
+      > div {
+        margin-left: 2rem;
+        &:nth-child(1) {
+          margin-left: 4.0625rem;
+        }
+      }
+
+      &-linkContainer {
+        position: relative;
+        margin-left: 2rem;
+        span {
+          //background-color: rgb(95, 95, 95);
+          color: $white;
+          font-weight: 500;
+          cursor: pointer;
+          &::after {
+            content: url(../images/icon-arrow-light.svg);
+            margin-left: 0.3rem;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: $white;
+            bottom: 0;
+            opacity: 0;
+            transition: all 250ms ease-in-out;
+          }
+          &:hover {
+            &::before {
+              width: 83%;
+              opacity: 1;
+            }
+          }
+        }
+        .dropdown {
+          position: relative;
+          background-color: white;
+          border-radius: 0.3125rem;
+          padding: 2rem 1.5rem;
+          min-width: 9.5rem;
+          color: $veryDarkBlue;
+          position: absolute;
+          top: 3rem;
+          left: -1.5rem;
+          opacity: 1;
+          z-index: 2;
+          > a {
+            &:not(:last-child) {
+              margin-bottom: 1.09375rem;
+            }
+          }
+          p {
+            cursor: pointer;
+            position: relative;
+            font-weight: 400;
+            font-size: 14px;
+
+            &:hover {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+    &__cta {
+      .login {
+        padding: 0;
+        background: none;
+        color: $white;
+        width: auto;
+        border: none;
+      }
+      .signUp {
+        color: $lightRed;
+        &:hover {
+          color: $white;
+          background-color: $veryLightRed;
+          border: solid 1px $veryLightRed;
+        }
+      }
+    }
+  }
+
+  &__hero {
+    position: relative;
+    text-align: center;
+    color: $white;
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+    &-title {
+      padding-bottom: 1.6rem;
+      font-size: 3.75rem;
+      line-height: 3.75rem;
+    }
+    &-text {
+      padding-bottom: 3rem;
+      font-weight: 300;
+    }
+    &-cta {
+      justify-content: center;
+      .startForFree {
+        color: $lightRed;
+        &:hover {
+          color: $white;
+          background-color: $veryLightRed;
+          border: solid 1px $veryLightRed;
+        }
+      }
+      .learnMore {
+        background: none;
+        color: $white;
+        &:hover {
+          color: $lightRed;
+          background-color: $white;
+        }
+      }
+    }
+  }
+}

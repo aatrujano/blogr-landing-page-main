@@ -1,0 +1,250 @@
+/* COLOR PALETTE */
+/*Primary*/
+/* Neutral */
+/* Gradients */
+/*FONTS*/
+/*GOLBAL*/
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h4 {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  font-family: 'Overpass', sans-serif;
+}
+
+p,
+span {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*BUTTON*/
+.button {
+  border-radius: 50px;
+  border: 1px solid white;
+  cursor: pointer;
+  padding: 1rem;
+  width: 8.5rem;
+  margin: 0 0.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+/*DISPLAY*/
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  position: relative;
+  background-image: url("../images/bg-pattern-intro.svg");
+  background-position-x: -446px;
+  background-repeat: no-repeat;
+  background-position-y: -1385px;
+  padding: 2rem 10.375rem;
+  border-radius: 0 0 0 60px;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+  background: linear-gradient(90deg, #ff8f70, #ff3d54);
+}
+
+.header .navBar {
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .navBar__logo img {
+  display: block;
+}
+
+.header .navBar__menu {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .navBar__menu > div {
+  margin-left: 2rem;
+}
+
+.header .navBar__menu > div:nth-child(1) {
+  margin-left: 4.0625rem;
+}
+
+.header .navBar__menu-linkContainer {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.header .navBar__menu-linkContainer span {
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.header .navBar__menu-linkContainer span::after {
+  content: url(../images/icon-arrow-light.svg);
+  margin-left: 0.3rem;
+}
+
+.header .navBar__menu-linkContainer span::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.header .navBar__menu-linkContainer span:hover::before {
+  width: 83%;
+  opacity: 1;
+}
+
+.header .navBar__menu-linkContainer .dropdown {
+  position: relative;
+  background-color: white;
+  border-radius: 0.3125rem;
+  padding: 2rem 1.5rem;
+  min-width: 9.5rem;
+  color: #1f3f5b;
+  position: absolute;
+  top: 3rem;
+  left: -1.5rem;
+  opacity: 1;
+  z-index: 2;
+}
+
+.header .navBar__menu-linkContainer .dropdown > a:not(:last-child) {
+  margin-bottom: 1.09375rem;
+}
+
+.header .navBar__menu-linkContainer .dropdown p {
+  cursor: pointer;
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.header .navBar__menu-linkContainer .dropdown p:hover {
+  font-weight: 500;
+}
+
+.header .navBar__cta .login {
+  padding: 0;
+  background: none;
+  color: white;
+  width: auto;
+  border: none;
+}
+
+.header .navBar__cta .signUp {
+  color: #ff525d;
+}
+
+.header .navBar__cta .signUp:hover {
+  color: white;
+  background-color: #ff7a85;
+  border: solid 1px #ff7a85;
+}
+
+.header__hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+}
+
+.header__hero-title {
+  padding-bottom: 1.6rem;
+  font-size: 3.75rem;
+  line-height: 3.75rem;
+}
+
+.header__hero-text {
+  padding-bottom: 3rem;
+  font-weight: 300;
+}
+
+.header__hero-cta {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__hero-cta .startForFree {
+  color: #ff525d;
+}
+
+.header__hero-cta .startForFree:hover {
+  color: white;
+  background-color: #ff7a85;
+  border: solid 1px #ff7a85;
+}
+
+.header__hero-cta .learnMore {
+  background: none;
+  color: white;
+}
+
+.header__hero-cta .learnMore:hover {
+  color: #ff525d;
+  background-color: white;
+}
+/*# sourceMappingURL=style.css.map */

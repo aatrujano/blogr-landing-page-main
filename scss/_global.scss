@@ -1,0 +1,67 @@
+/*GOLBAL*/
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h4 {
+  box-sizing: inherit;
+  font-family: 'Overpass', sans-serif;
+}
+
+p,
+span {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+}
+
+//p {
+//font-size: 0.75rem;
+//line-height: 1.25rem;
+//color: $darkGray;
+//font-weight: 600;
+//}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*BUTTON*/
+
+.button {
+  border-radius: 50px;
+  border: 1px solid $white;
+  cursor: pointer;
+  padding: 1rem;
+  width: 8.5rem;
+  margin: 0 0.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  transition: all 200ms ease-in-out;
+}
+
+/*DISPLAY*/
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
