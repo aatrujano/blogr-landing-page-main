@@ -3,6 +3,45 @@
 /* Neutral */
 /* Gradients */
 /*FONTS*/
+@-webkit-keyframes displayMenu {
+  from {
+    visibility: hidden;
+  }
+  30% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    visibility: visible;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+}
+@keyframes displayMenu {
+  from {
+    visibility: hidden;
+  }
+  30% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    visibility: visible;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+}
+
+.displayMenu {
+  -webkit-animation: displayMenu 100ms ease-in-out forwards;
+          animation: displayMenu 100ms ease-in-out forwards;
+}
+
+.selectedMenu {
+  -webkit-animation: selectedMenu 100ms ease-in-out forwards;
+          animation: selectedMenu 100ms ease-in-out forwards;
+}
+
 /*GOLBAL*/
 html {
   font-size: 100%;
@@ -55,8 +94,8 @@ a:hover {
   margin: 0 0.5rem;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 /*DISPLAY*/
@@ -73,13 +112,27 @@ a:hover {
           flex-direction: column;
 }
 
+/* PADDING */
+.latPadding {
+  padding-left: 10.375rem;
+  padding-right: 10.375rem;
+}
+
+@media (max-width: 71.75rem) {
+  .latPadding {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
 .header {
   position: relative;
   background-image: url("../images/bg-pattern-intro.svg");
-  background-position-x: -446px;
+  background-position-x: -27.875rem;
   background-repeat: no-repeat;
-  background-position-y: -1385px;
-  padding: 2rem 10.375rem;
+  background-position-y: -86.5625rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   border-radius: 0 0 0 60px;
 }
 
@@ -129,14 +182,17 @@ a:hover {
 }
 
 .header .navBar__menu-linkContainer span {
+  position: relative;
   color: white;
   font-weight: 500;
   cursor: pointer;
 }
 
-.header .navBar__menu-linkContainer span::after {
-  content: url(../images/icon-arrow-light.svg);
-  margin-left: 0.3rem;
+.header .navBar__menu-linkContainer span img {
+  position: relative;
+  z-index: -1;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 
 .header .navBar__menu-linkContainer span::before {
@@ -147,13 +203,18 @@ a:hover {
   background-color: white;
   bottom: 0;
   opacity: 0;
-  -webkit-transition: all 250ms ease-in-out;
-  transition: all 250ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 
-.header .navBar__menu-linkContainer span:hover::before {
+.header .navBar__menu-linkContainer span.selectedMenu::before {
   width: 83%;
   opacity: 1;
+}
+
+.header .navBar__menu-linkContainer span.selectedMenu img {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .header .navBar__menu-linkContainer .dropdown {
@@ -168,6 +229,7 @@ a:hover {
   left: -1.5rem;
   opacity: 1;
   z-index: 2;
+  visibility: hidden;
 }
 
 .header .navBar__menu-linkContainer .dropdown > a:not(:last-child) {
@@ -182,7 +244,7 @@ a:hover {
 }
 
 .header .navBar__menu-linkContainer .dropdown p:hover {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .header .navBar__cta .login {
