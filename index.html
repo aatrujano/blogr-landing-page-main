@@ -23,15 +23,24 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body id="body">
+    <div id="overlay"></div>
     <header class="header latPadding">
       <nav class="navBar flex">
         <div class="navBar__logo&links flex">
           <div class="navBar__logo">
             <img src="./images/logo.svg" alt="logo" />
           </div>
-          <div class="navBar__menu flex">
+          <div id="menu" class="navBar__menu flex">
             <div class="navBar__menu-linkContainer flex flex-col">
-              <span id=1 >Product <img src="./images/icon-arrow-light.svg" alt=""></span>
+              <span id="1"
+                >Product
+                <picture>
+                  <source
+                    media="(max-width: 790px)"
+                    srcset="./images/icon-arrow-dark.svg"
+                  />
+                  <img src="./images/icon-arrow-light.svg" alt="" /> </picture
+              ></span>
               <div id="productDropdown" class="dropdown flex flex-col">
                 <a>
                   <p>Overview</p>
@@ -51,7 +60,15 @@
               </div>
             </div>
             <div class="navBar__menu-linkContainer flex flex-col">
-              <span id=2>Company <img src="./images/icon-arrow-light.svg" alt=""></span>
+              <span id="2"
+                >Company
+                <picture>
+                  <source
+                    media="(max-width: 790px)"
+                    srcset="./images/icon-arrow-dark.svg"
+                  />
+                  <img src="./images/icon-arrow-light.svg" alt="" /> </picture
+              ></span>
               <div id="companyDropdown" class="dropdown flex flex-col">
                 <a>
                   <p>About</p>
@@ -68,7 +85,15 @@
               </div>
             </div>
             <div class="navBar__menu-linkContainer flex flex-col">
-              <span id=3>Connect <img src="./images/icon-arrow-light.svg" alt=""></span>
+              <span id="3"
+                >Connect
+                <picture>
+                  <source
+                    media="(max-width: 790px)"
+                    srcset="./images/icon-arrow-dark.svg"
+                  />
+                  <img src="./images/icon-arrow-light.svg" alt="" /> </picture
+              ></span>
               <div id="connectDropdown" class="dropdown flex flex-col">
                 <a>
                   <p>Contact</p>
@@ -81,11 +106,19 @@
                 </a>
               </div>
             </div>
+            <hr>
+            <div class="mobile__cta flex flex-col">
+              <button class="button mobileLogin">Login</button>
+              <button class="button mobileSignUp">Sign Up</button>
+            </div>
           </div>
         </div>
         <div class="navBar__cta">
           <button class="button login">Login</button>
           <button class="button signUp">Sign Up</button>
+        </div>
+        <div id="hamburger" class="navBar__hamburger flex flex-col">
+          <span></span><span></span><span></span>
         </div>
       </nav>
       <div class="header__hero flex flex-col">

@@ -14,7 +14,20 @@ html {
 body {
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: 0;  
+}
+
+#overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  opacity: .8;
+  z-index: 1;
+  display: none;
+  &.showOverlay{
+    display: block;
+  }
 }
 
 h1,
@@ -54,7 +67,7 @@ a:hover {
   margin: 0 0.5rem;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
-  transition: all 200ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 /*DISPLAY*/
@@ -64,4 +77,23 @@ a:hover {
 }
 .flex-col {
   flex-direction: column;
+}
+
+/* PADDING */
+
+.latPadding {
+  padding-left: 10.375rem;
+  padding-right: 10.375rem;
+  @include breakPointDown('1148') {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  @include breakPointDown('930'){
+    padding-left: 2rem;
+    padding-right: 2rem;    
+  }
+  @include breakPointDown('790'){
+    padding-left: 5rem;
+    padding-right: 5rem;    
+  }
 }
