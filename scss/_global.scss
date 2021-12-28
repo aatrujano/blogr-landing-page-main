@@ -14,18 +14,18 @@ html {
 body {
   position: relative;
   margin: 0;
-  padding: 0;  
+  padding: 0;
 }
 
-#overlay{
+#overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0);
-  opacity: .8;
+  opacity: 0.8;
   z-index: 1;
   display: none;
-  &.showOverlay{
+  &.showOverlay {
     display: block;
   }
 }
@@ -41,13 +41,6 @@ span {
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
 }
-
-//p {
-//font-size: 0.75rem;
-//line-height: 1.25rem;
-//color: $darkGray;
-//font-weight: 600;
-//}
 
 a,
 a:visited,
@@ -88,12 +81,20 @@ a:hover {
     padding-left: 6rem;
     padding-right: 6rem;
   }
-  @include breakPointDown('930'){
-    padding-left: 2rem;
-    padding-right: 2rem;    
+  @include breakPointDown('930') {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
-  @include breakPointDown('790'){
+  @include breakPointDown('830') {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include breakPointDown('790') {
     padding-left: 5rem;
-    padding-right: 5rem;    
+    padding-right: 5rem;
+  }
+  @include breakPointDown('730') {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }

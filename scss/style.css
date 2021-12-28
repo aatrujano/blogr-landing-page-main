@@ -124,7 +124,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0);
-  opacity: .8;
+  opacity: 0.8;
   z-index: 1;
   display: none;
 }
@@ -196,6 +196,13 @@ a:hover {
 
 @media (max-width: 58.125rem) {
   .latPadding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (max-width: 51.875rem) {
+  .latPadding {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -208,15 +215,44 @@ a:hover {
   }
 }
 
+@media (max-width: 45.625rem) {
+  .latPadding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .header {
   position: relative;
   background-image: url("../images/bg-pattern-intro.svg");
   background-position-x: -27.875rem;
   background-repeat: no-repeat;
   background-position-y: -86.5625rem;
-  padding-top: 2rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
-  border-radius: 0 0 0 60px;
+  border-radius: 0 0 0 90px;
+}
+
+@media (max-width: 58.125rem) {
+  .header {
+    background-position-x: -22.875rem;
+    background-position-y: -27.5625rem;
+    background-size: 102rem;
+  }
+}
+
+@media (max-width: 49.375rem) {
+  .header {
+    padding-bottom: 7rem;
+  }
+}
+
+@media (max-width: 45.625rem) {
+  .header {
+    background-position-x: -24.875rem;
+    background-position-y: -16.5625rem;
+    background-size: 97rem;
+  }
 }
 
 .header::before {
@@ -229,6 +265,7 @@ a:hover {
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
   background: linear-gradient(90deg, #ff8f70, #ff3d54);
+  border-radius: 0 0 0 90px;
 }
 
 .header .navBar {
@@ -559,6 +596,13 @@ a:hover {
   padding-bottom: 1.6rem;
   font-size: 3.75rem;
   line-height: 3.75rem;
+}
+
+@media (max-width: 37.5rem) {
+  .header__hero-title {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
 }
 
 .header__hero-text {

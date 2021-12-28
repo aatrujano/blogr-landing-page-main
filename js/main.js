@@ -43,10 +43,10 @@ hamburgerIcon.addEventListener('click', () => {
 // OVERLAY
 
 overlay.addEventListener('click', () => {
-  menuArr.forEach(menu => {
-    if(menu.classList.contains('selectedMenu')){
+  menuArr.forEach((menu) => {
+    if (menu.classList.contains('selectedMenu')) {
       removeClass(menu, 'selectedMenu');
     }
-  })
+  });
   overlay.classList.toggle('showOverlay');
-})
+});
