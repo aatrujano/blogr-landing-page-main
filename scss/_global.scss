@@ -30,7 +30,7 @@ body {
   }
 }
 
-h1,
+h1, h2, h3,
 h4 {
   box-sizing: inherit;
   font-family: 'Overpass', sans-serif;
@@ -94,6 +94,14 @@ a:hover {
     padding-right: 5rem;
   }
   @include breakPointDown('730') {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include breakPointDown('600') {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @include breakPointDown('435') {
     padding-left: 2rem;
     padding-right: 2rem;
   }
