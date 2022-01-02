@@ -134,13 +134,21 @@ body {
 }
 
 h1,
+h2,
+h3,
 h4 {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
   font-family: 'Overpass', sans-serif;
 }
 
-p,
+p {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
 span {
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
@@ -222,6 +230,20 @@ a:hover {
   }
 }
 
+@media (max-width: 37.5rem) {
+  .latPadding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (max-width: 27.1875rem) {
+  .latPadding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .header {
   position: relative;
   background-image: url("../images/bg-pattern-intro.svg");
@@ -229,7 +251,7 @@ a:hover {
   background-repeat: no-repeat;
   background-position-y: -86.5625rem;
   padding-top: 4rem;
-  padding-bottom: 2rem;
+  padding-bottom: 6rem;
   border-radius: 0 0 0 90px;
 }
 
@@ -634,5 +656,48 @@ a:hover {
 .header__hero-cta .learnMore:hover {
   color: #ff525d;
   background-color: white;
+}
+
+.main {
+  overflow: hidden;
+  padding-top: 9rem;
+  padding-bottom: 16.25rem;
+}
+
+.main .designedForFuture {
+  color: #1f3f5b;
+}
+
+.main .designedForFuture__title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 6.875rem;
+  font-size: 2.25rem;
+}
+
+.main .designedForFuture__container {
+  position: relative;
+}
+
+.main .designedForFuture__container-info {
+  width: 31.25rem;
+}
+
+.main .designedForFuture__container-info > h3 {
+  font-size: 1.625rem;
+  margin-bottom: 1.875rem;
+}
+
+.main .designedForFuture__container-info > p:not(:last-child) {
+  margin-bottom: 5.125rem;
+}
+
+.main .designedForFuture__container-img img {
+  width: 60rem;
+  position: absolute;
+  top: -245px;
+  right: -460px;
 }
 /*# sourceMappingURL=style.css.map */

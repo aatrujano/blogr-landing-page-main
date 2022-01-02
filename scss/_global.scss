@@ -14,7 +14,7 @@ html {
 body {
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: 0;  
 }
 
 #overlay {
@@ -30,13 +30,21 @@ body {
   }
 }
 
-h1, h2, h3,
+h1,
+h2,
+h3,
 h4 {
   box-sizing: inherit;
   font-family: 'Overpass', sans-serif;
 }
 
-p,
+p {
+  font-family: 'Overpass', sans-serif;  
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
 span {
   font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
