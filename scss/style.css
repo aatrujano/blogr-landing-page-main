@@ -239,8 +239,8 @@ a:hover {
 
 @media (max-width: 27.1875rem) {
   .latPadding {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 2.34375rem;
+    padding-right: 2.34375rem;
   }
 }
 
@@ -622,7 +622,7 @@ a:hover {
 
 @media (max-width: 37.5rem) {
   .header__hero-title {
-    font-size: 36px;
+    font-size: 35px;
     letter-spacing: -1px;
   }
 }
@@ -675,14 +675,38 @@ a:hover {
   margin: auto;
   margin-bottom: 6.875rem;
   font-size: 2.25rem;
+  text-align: center;
 }
 
 .main .designedForFuture__container {
   position: relative;
 }
 
+@media (max-width: 63.9375rem) {
+  .main .designedForFuture__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .main .designedForFuture__container-info {
-  width: 31.25rem;
+  width: 45.5%;
+}
+
+@media (max-width: 63.9375rem) {
+  .main .designedForFuture__container-info {
+    width: unset;
+    max-width: 40rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
 }
 
 .main .designedForFuture__container-info > h3 {
@@ -694,10 +718,36 @@ a:hover {
   margin-bottom: 5.125rem;
 }
 
-.main .designedForFuture__container-img img {
+.main .designedForFuture__container-img .imgDesktop {
   width: 60rem;
   position: absolute;
   top: -245px;
   right: -460px;
+}
+
+@media (max-width: 83.75rem) {
+  .main .designedForFuture__container-img .imgDesktop {
+    width: 50rem;
+    top: -145px;
+    right: -415px;
+  }
+}
+
+@media (max-width: 63.9375rem) {
+  .main .designedForFuture__container-img .imgDesktop {
+    display: none;
+  }
+}
+
+.main .designedForFuture__container-img .imgMobile {
+  display: none;
+}
+
+@media (max-width: 63.9375rem) {
+  .main .designedForFuture__container-img .imgMobile {
+    display: block;
+    position: relative;
+    bottom: 60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

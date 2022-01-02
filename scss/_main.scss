@@ -1,4 +1,4 @@
-.main {  
+.main {
   overflow: hidden;
   padding-top: 9rem;
   padding-bottom: 16.25rem;
@@ -9,27 +9,54 @@
       margin: auto;
       margin-bottom: 6.875rem;
       font-size: 2.25rem;
+      text-align: center;
     }
     &__container {
       position: relative;
+      @include breakPointDown('1023') {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
       &-info {
-        width: 31.25rem;
+        width: 45.5%;
+        @include breakPointDown('1023') {
+          width: unset;
+          max-width: 40rem;
+          align-items: center;
+          text-align: center;
+        }
         > h3 {
           font-size: 1.625rem;
           margin-bottom: 1.875rem;
         }
         > p {
-          &:not(:last-child){
+          &:not(:last-child) {
             margin-bottom: 5.125rem;
           }
         }
       }
       &-img {
-        img {
+        .imgDesktop {
           width: 60rem;
           position: absolute;
           top: -245px;
           right: -460px;
+          @include breakPointDown('1340') {
+            width: 50rem;
+            top: -145px;
+            right: -415px;
+          }
+          @include breakPointDown('1023') {
+            display: none;
+          }
+        }
+        .imgMobile {
+          display: none;
+          @include breakPointDown('1023') {
+            display: block;
+            position: relative;
+            bottom: 60px;
+          }
         }
       }
     }
