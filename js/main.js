@@ -36,8 +36,7 @@ const showDropDown = ({ target }) => {
 menuArr.forEach((menu) => menu.addEventListener('click', showDropDown));
 hamburgerIcon.addEventListener('click', () => {
   hamburgerIcon.classList.toggle('open');
-  menu.classList.toggle('showMobileMenu');
-  console.log(menu);
+  menu.classList.toggle('showMobileMenu');  
 });
 
 // OVERLAY

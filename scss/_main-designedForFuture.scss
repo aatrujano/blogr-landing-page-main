@@ -4,11 +4,11 @@
   padding-bottom: 16.25rem;
   .designedForFuture {
     color: $veryDarkBlue;
+    padding-bottom: 17.8125rem;
     &__title {
       width: fit-content;
       margin: auto;
       margin-bottom: 6.875rem;
-      font-size: 2.25rem;
       text-align: center;
     }
     &__container {
@@ -26,7 +26,6 @@
           text-align: center;
         }
         > h3 {
-          font-size: 1.625rem;
           margin-bottom: 1.875rem;
         }
         > p {
