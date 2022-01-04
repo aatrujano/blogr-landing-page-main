@@ -5,6 +5,9 @@
   .designedForFuture {
     color: $veryDarkBlue;
     padding-bottom: 17.8125rem;
+    @include breakPointDown('1023'){
+      padding-bottom: 16.875rem;
+    }
     &__title {
       width: fit-content;
       margin: auto;

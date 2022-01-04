@@ -677,6 +677,12 @@ a:hover {
   padding-bottom: 17.8125rem;
 }
 
+@media (max-width: 63.9375rem) {
+  .main .designedForFuture {
+    padding-bottom: 16.875rem;
+  }
+}
+
 .main .designedForFuture__title {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -768,6 +774,26 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-radius: 0 90px 0 90px;
+}
+
+@media (max-width: 63.9375rem) {
+  .main .stateOfArt {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 14rem;
+    padding-bottom: 7.5rem;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164));
+    background: linear-gradient(180deg, #2c2d3f, #3f4164);
+  }
 }
 
 .main .stateOfArt::before {
@@ -779,8 +805,17 @@ a:hover {
   left: 0;
   background-image: url("../images/bg-pattern-circles.svg");
   background-repeat: no-repeat;
-  background-position-x: -215px;
-  background-position-y: -500px;
+  background-position-x: -13.4375rem;
+  background-position-y: -31.25rem;
+  border-radius: 0 90px 0 90px;
+}
+
+@media (max-width: 63.9375rem) {
+  .main .stateOfArt::before {
+    background-position-x: -6.9rem;
+    background-position-y: -14.5rem;
+    background-size: 37.1rem;
+  }
 }
 
 .main .stateOfArt__phones img {
@@ -807,8 +842,18 @@ a:hover {
   }
 }
 
+@media (max-width: 63.9375rem) {
+  .main .stateOfArt__phones img {
+    top: -11.5rem;
+    left: calc(50% - 187.5px);
+    width: 375px;
+  }
+}
+
 .main .stateOfArt__info {
   width: 31.25rem;
+  position: relative;
+  z-index: 5;
 }
 
 @media (max-width: 83.75rem) {
@@ -820,6 +865,13 @@ a:hover {
 @media (max-width: 77.5rem) {
   .main .stateOfArt__info {
     width: 20.25rem;
+  }
+}
+
+@media (max-width: 63.9375rem) {
+  .main .stateOfArt__info {
+    width: unset;
+    text-align: center;
   }
 }
 
