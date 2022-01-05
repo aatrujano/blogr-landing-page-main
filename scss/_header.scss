@@ -159,7 +159,7 @@
             }
             &.selectedMenu {
               + .dropdown {
-                animation: displayMobileMenu 250ms ease-in-out forwards;
+                animation: displayMobileMenu 450ms ease-in-out forwards;
                 > a {
                   position: relative;
                   visibility: visible;
@@ -190,7 +190,7 @@
             > a {
               position: absolute;
               visibility: hidden;
-              transition: margin-bottom 450ms ease-in-out;
+              transition: margin-bottom 650ms ease-in-out;
               &:not(:last-child) {
                 margin-bottom: 0;
               }
