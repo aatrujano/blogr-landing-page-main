@@ -956,4 +956,35 @@ a:hover {
     padding: 0 0.5px;
   }
 }
+
+.footer {
+  background-color: #25252d;
+}
+
+.footer__container {
+  color: white;
+  padding-top: 4.0625rem;
+  padding-bottom: 4.6875rem;
+}
+
+.footer__container > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 17.8125rem;
+}
+
+.footer__container span:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.footer__container span:nth-child(1) {
+  padding-top: 0.6875rem;
+  margin-bottom: 2.1875rem;
+  font-weight: 700;
+}
+
+.footer__container a {
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */
