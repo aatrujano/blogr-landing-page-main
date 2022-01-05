@@ -1,0 +1,25 @@
+.main {
+  .freeOpenSimple {
+    color: $veryDarkBlue;
+    &__container {
+      position: relative;
+      justify-content: space-between;
+      padding-top: 18.75rem;
+      &-img {
+        img {
+          position: absolute;
+          left: -275px;
+          top: 130px;
+        }
+      }
+      &-info {
+        width: 45.7%;
+        > p {
+          &:not(:last-child) {
+            margin-bottom: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
