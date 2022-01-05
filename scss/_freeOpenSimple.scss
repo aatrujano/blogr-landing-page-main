@@ -5,18 +5,46 @@
       position: relative;
       justify-content: space-between;
       padding-top: 18.75rem;
+      @include breakPointDown('1023') {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 3.75rem;
+      }
       &-img {
-        img {
+        .laptopDesktop {
           position: absolute;
           left: -275px;
           top: 130px;
+          @include breakPointDown('1240') {
+            transform: scale(0.8);
+            left: -317px;
+          }
+          @include breakPointDown('1023') {
+            display: none;
+          }
+        }
+        .laptopMobile {
+          display: none;
+          @include breakPointDown('1023') {
+            display: block;
+            margin-bottom: 2.1875rem;
+          }
         }
       }
       &-info {
         width: 45.7%;
+        @include breakPointDown('1023') {
+          width: unset;
+        }
         > p {
           &:not(:last-child) {
             margin-bottom: 5rem;
+            @include breakPointDown('1023') {
+              margin-bottom: 2.8125rem;
+              padding: 0 0.5px;
+            }
           }
         }
       }
